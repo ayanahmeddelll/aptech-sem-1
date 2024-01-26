@@ -20,3 +20,11 @@ $('#recipeCarousel').carousel({
         }
   });
   
+  document.addEventListener("click", function (event) {
+    const menu = document.querySelector(".menu");
+    if (!menu.contains(event.target)) {
+      const dropdown = menu.querySelector(".dropdown-menu");
+      dropdown.style.display = "none";
+    }
+  });
+  

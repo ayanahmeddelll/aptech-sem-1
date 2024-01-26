@@ -510,3 +510,46 @@ margin-top: 5em;
     background-color: var(--core);
     text-decoration: none;
 }
+.menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-button {
+  background-color: transparent;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-size: 20px;
+  margin-top: -8%;
+  cursor: pointer;
+  z-index: 1; /* Ensure the button is above other elements */
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 48%;
+  margin-top: 25%;
+  background-color: var(--core);
+  border: 1px solid #ccc;
+  transform: scaleX(0);
+  transform-origin: top;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  z-index: 2; /* Set a higher z-index for the menu to ensure it appears above other elements */
+}
+
+.menu-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+
+}
+
+
+/* CSS for the hover effect */
+.menu-container:hover .menu {
+  transform: scaleX(1);
+}
